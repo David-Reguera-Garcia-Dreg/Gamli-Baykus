@@ -36,7 +36,7 @@
 **Gizli PHP Arayuz (Porta Kurulu)**
 
 
-**PHP Arayuz ozellikleri :**
+****PHP Arayuz ozellikleri :****
 
 **Dosya sisteminde gozukmeme**
 
