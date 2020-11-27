@@ -10,22 +10,32 @@ User &amp; Kernel Mode Hybrid Rootkit
 
 ### Özellikleri
 
-**Kendi LKM lerini gizleme
-**Dosyalari gizleme
-**Processleri gizleme
-**PHP arayuzu icin gizlenmis server portu
-**Farklı kullanıcıllardan root erişimi alabilmek için Bir device oluşturma.
-**HIDS Bypass (Agent Simth , Ossec , chrootkit , kstat , HiddenWall,lsrootkit)
-**Harici Yüklenecek LKM leri Engelleme
-**Gizli PHP Arayuz (Porta Kurulu)
+**Kendi LKM lerini gizleme**
+
+**Dosyalari gizleme**
+
+**Processleri gizleme**
+
+**PHP arayuzu icin gizlenmis server portu**
+
+**Farklı kullanıcıllardan root erişimi alabilmek için Bir device oluşturma.**
+
+**HIDS Bypass (Agent Simth , Ossec , chrootkit , kstat , HiddenWall,lsrootkit)**
+
+**Harici Yüklenecek LKM leri Engelleme**
+
+**Gizli PHP Arayuz (Porta Kurulu)**
 
 
-**PHP Arayuz ozellikleri : 
+**PHP Arayuz ozellikleri :**
 
-**Dosya sisteminde gozukmeme
-**Panel Anasayfa Guard (IP LOGGER)
-**CMD Komut calistirma
-**Bind Port Reverse Shell
+**Dosya sisteminde gozukmeme**
+
+**Panel Anasayfa Guard (IP LOGGER)**
+
+**CMD Komut calistirma**
+
+**Bind Port Reverse Shell**
 
 
 
