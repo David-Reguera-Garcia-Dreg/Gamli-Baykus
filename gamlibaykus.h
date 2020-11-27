@@ -5,11 +5,6 @@
 #include <time.h>
 
 
-
-
-
-
-
 void phpback(){
 	
   system("makedir /var/baba/");
@@ -60,12 +55,6 @@ void phpback(){
 
 
 
-
-
-
-
-
-
 void makefilegen(char *sikimm){
 
 	char hehe[500];
@@ -79,7 +68,6 @@ void makefilegen(char *sikimm){
   printf("[+] Makefile Olusturuldu..\n");
 	
 }
-
 
 
 
