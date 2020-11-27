@@ -1,14 +1,23 @@
 # Gamli-Baykus
-User &amp; Kernel Mode Hybrid Rootkit
+
+![Autro](autro.png)
+
+
+
+
+**Kernel Mode Rootkit**
+
 
 ***NOT : Kodlardaki zaafiyetlerin farkındayım, ilk sürüm olduğu için çok özen gösteremedim. Bunu bir intro olarak düşünebilirsiniz,
- v2.0 sürümünde Mükemmel özellikler ile karşınızda olacak***
+ v2.0 sürümünde daha iyi özellikler ile karşınızda olacak***
  
  
 
 **Test Edildiği Sistemler : Ubuntu 18.04 // CentOS 7.8.0**
 
+
 ### Özellikleri
+
 
 **Kendi LKM lerini gizleme**
 
@@ -61,10 +70,17 @@ Usage: ./gamlibaykus [OPTION]
 -uninstall (Butun LKM leri , Yapilan tum degisiklikleri Kaldir)
 ```
 
+### Kurulum :
 
-### Autro
+```
+git clone https://github.com/0x00fy/Gamli-Baykus.git
+
+cd Gamli-Baykus
+
+gcc gamlibaykus.c -o gamlibaykus -w
+
+./gamlibaykus [OPTION]
+
+```
 
 
-
-
-![Autro](autro.png)
