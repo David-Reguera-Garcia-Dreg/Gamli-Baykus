@@ -1,6 +1,6 @@
 # Gamli-Baykus
 
-![Autro](autro.png)
+![Autro](autro.jpg)
 
 
 
