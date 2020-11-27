@@ -2,11 +2,11 @@
 User &amp; Kernel Mode Hybrid Rootkit
 
 ***NOT : Kodlardaki zaafiyetlerin farkındayım, ilk sürüm olduğu için çok özen gösteremedim. Bunu bir intro olarak düşünebilirsiniz,
- v2.0 sürümünde Mükemmel özellikler ile karşınızda olacak ***
+ v2.0 sürümünde Mükemmel özellikler ile karşınızda olacak***
  
  
 
-**Test Edildiği Sistemler : Ubuntu 18.04 // CentOS 7.8.0
+**Test Edildiği Sistemler : Ubuntu 18.04 // CentOS 7.8.0**
 
 ### Özellikleri
 
