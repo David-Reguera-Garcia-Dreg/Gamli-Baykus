@@ -32,7 +32,7 @@
 
 **HIDS Bypass (Agent Simth , Ossec , chrootkit , kstat , HiddenWall,lsrootkit)**
 
-**Bypass Linux Kernel 3.15 x86 CR4 & CR0 pinning protections
+**Bypass Linux Kernel 3.15 x86 CR4 & CR0 pinning protections**
 
 **Gizli PHP Arayuz (Porta Kurulu)**
 
