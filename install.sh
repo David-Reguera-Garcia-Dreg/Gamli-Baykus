@@ -30,7 +30,7 @@ sudo mv -f lkms/ /var/baba/lkms
 sudo mv -f wpanel/ /var/baba/wpanel
 echo "[+] Kurulum Tamamlandi."
 sudo touch /var/baba/lkms/installed.txt
-echo "Kurulum yapildi..\nhttps://github.com/0x00fy/Gamli-Baykus/"
+echo -e "Kurulum yapildi..\nhttps://github.com/0x00fy/Gamli-Baykus/" >> /var/baba/lkms/installed.txt
 sleep 1
 echo "[+] Baslatiliyor.."
 /usr/bin/gamlibaykus
